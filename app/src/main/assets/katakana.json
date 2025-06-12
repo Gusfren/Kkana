@@ -1,0 +1,57 @@
+[
+  { "huruf": "ア", "romaji": "a", "suara": "a_2", "level": 1 },
+  { "huruf": "イ", "romaji": "i", "suara": "i_2", "level": 1 },
+  { "huruf": "ウ", "romaji": "u", "suara": "u_2", "level": 1 },
+  { "huruf": "エ", "romaji": "e", "suara": "e_2", "level": 1 },
+  { "huruf": "オ", "romaji": "o", "suara": "o_2", "level": 1 },
+
+  { "huruf": "カ", "romaji": "ka", "suara": "ka_2", "level": 2 },
+  { "huruf": "キ", "romaji": "ki", "suara": "ki_2", "level": 2 },
+  { "huruf": "ク", "romaji": "ku", "suara": "ku_2", "level": 2 },
+  { "huruf": "ケ", "romaji": "ke", "suara": "ke_2", "level": 2 },
+  { "huruf": "コ", "romaji": "ko", "suara": "ko_2", "level": 2 },
+
+  { "huruf": "サ", "romaji": "sa", "suara": "sa_2", "level": 3 },
+  { "huruf": "シ", "romaji": "shi", "suara": "shi_2", "level": 3 },
+  { "huruf": "ス", "romaji": "su", "suara": "su_2", "level": 3 },
+  { "huruf": "セ", "romaji": "se", "suara": "se_2", "level": 3 },
+  { "huruf": "ソ", "romaji": "so", "suara": "so_2", "level": 3 },
+
+  { "huruf": "タ", "romaji": "ta", "suara": "ta_2", "level": 4 },
+  { "huruf": "チ", "romaji": "chi", "suara": "chi_2", "level": 4 },
+  { "huruf": "ツ", "romaji": "tsu", "suara": "tsu_2", "level": 4 },
+  { "huruf": "テ", "romaji": "te", "suara": "te_2", "level": 4 },
+  { "huruf": "ト", "romaji": "to", "suara": "to_2", "level": 4 },
+
+  { "huruf": "ナ", "romaji": "na", "suara": "na_2", "level": 5 },
+  { "huruf": "ニ", "romaji": "ni", "suara": "ni_2", "level": 5 },
+  { "huruf": "ヌ", "romaji": "nu", "suara": "nu_2", "level": 5 },
+  { "huruf": "ネ", "romaji": "ne", "suara": "ne_2", "level": 5 },
+  { "huruf": "ノ", "romaji": "no", "suara": "no_2", "level": 5 },
+
+  { "huruf": "ハ", "romaji": "ha", "suara": "ha_2", "level": 6 },
+  { "huruf": "ヒ", "romaji": "hi", "suara": "hi_2", "level": 6 },
+  { "huruf": "フ", "romaji": "fu", "suara": "fu_2", "level": 6 },
+  { "huruf": "ヘ", "romaji": "he", "suara": "he_2", "level": 6 },
+  { "huruf": "ホ", "romaji": "ho", "suara": "ho_2", "level": 6 },
+
+  { "huruf": "マ", "romaji": "ma", "suara": "ma_2", "level": 7 },
+  { "huruf": "ミ", "romaji": "mi", "suara": "mi_2", "level": 7 },
+  { "huruf": "ム", "romaji": "mu", "suara": "mu_2", "level": 7 },
+  { "huruf": "メ", "romaji": "me", "suara": "me_2", "level": 7 },
+  { "huruf": "モ", "romaji": "mo", "suara": "mo_2", "level": 7 },
+
+  { "huruf": "ヤ", "romaji": "ya", "suara": "ya_2", "level": 8 },
+  { "huruf": "ユ", "romaji": "yu", "suara": "yu_2", "level": 8 },
+  { "huruf": "ヨ", "romaji": "yo", "suara": "yo_2", "level": 8 },
+
+  { "huruf": "ラ", "romaji": "ra", "suara": "ra_2", "level": 9 },
+  { "huruf": "リ", "romaji": "ri", "suara": "ri_2", "level": 9 },
+  { "huruf": "ル", "romaji": "ru", "suara": "ru_2", "level": 9 },
+  { "huruf": "レ", "romaji": "re", "suara": "re_2", "level": 9 },
+  { "huruf": "ロ", "romaji": "ro", "suara": "ro_2", "level": 9 },
+
+  { "huruf": "ワ", "romaji": "wa", "suara": "wa_2", "level": 10 },
+  { "huruf": "ヲ", "romaji": "wo", "suara": "wo_2", "level": 10 },
+  { "huruf": "ン", "romaji": "n", "suara": "n_2", "level": 10 }
+]

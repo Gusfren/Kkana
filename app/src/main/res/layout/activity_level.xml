@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- LEVEL 1 - 10 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 1" />
+
+            <TextView
+                android:id="@+id/tvScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 2" />
+
+            <TextView
+                android:id="@+id/tvScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 3" />
+
+            <TextView
+                android:id="@+id/tvScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 4" />
+
+            <TextView
+                android:id="@+id/tvScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 5" />
+
+            <TextView
+                android:id="@+id/tvScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 6" />
+
+            <TextView
+                android:id="@+id/tvScore6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 7" />
+
+            <TextView
+                android:id="@+id/tvScore7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar7"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 8" />
+
+            <TextView
+                android:id="@+id/tvScore8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar8"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 9" />
+
+            <TextView
+                android:id="@+id/tvScore9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar9"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnLevel10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Level 10" />
+
+            <TextView
+                android:id="@+id/tvScore10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor tertinggi: 0"
+                android:paddingStart="16dp" />
+
+            <ImageView
+                android:id="@+id/ivStar10"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="Bintang"
+                android:src="@drawable/star_0" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

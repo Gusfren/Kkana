@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <Button
+        android:id="@+id/btnBelajarHiragana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belajar Hiragana"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnBelajarKatakana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belajar Katakana"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnBelajarKanji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belajar Kanji" />
+
+    <Button
+        android:id="@+id/btnKuisHiragana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kuis Hiragana"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnKuisKatakana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kuis Katakana"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnKuisKanji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kuis Kanji"
+        android:layout_marginTop="12dp" />
+</LinearLayout>

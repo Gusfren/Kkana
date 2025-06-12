@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutKuis"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvSoalHuruf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="あ"
+        android:textSize="64sp"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/etJawaban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ketik jawaban (romaji)"
+        android:inputType="text"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnCekJawaban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cek Jawaban" />
+
+    <TextView
+        android:id="@+id/tvSkor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skor: 0"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"/>
+
+</LinearLayout>

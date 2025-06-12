@@ -1,0 +1,602 @@
+[
+  {
+    "huruf": "一",
+    "romaji": "ichi",
+    "suara": "ichi_3",
+    "level": 1
+  },
+  {
+    "huruf": "二",
+    "romaji": "ni",
+    "suara": "ni_3",
+    "level": 1
+  },
+  {
+    "huruf": "三",
+    "romaji": "san",
+    "suara": "san_3",
+    "level": 1
+  },
+  {
+    "huruf": "四",
+    "romaji": "shi",
+    "suara": "shi_3",
+    "level": 1
+  },
+  {
+    "huruf": "五",
+    "romaji": "go",
+    "suara": "go_3",
+    "level": 1
+  },
+  {
+    "huruf": "六",
+    "romaji": "roku",
+    "suara": "roku_3",
+    "level": 1
+  },
+  {
+    "huruf": "七",
+    "romaji": "shichi",
+    "suara": "shichi_3",
+    "level": 1
+  },
+  {
+    "huruf": "八",
+    "romaji": "hachi",
+    "suara": "hachi_3",
+    "level": 1
+  },
+  {
+    "huruf": "九",
+    "romaji": "kyuu",
+    "suara": "kyuu_3",
+    "level": 1
+  },
+  {
+    "huruf": "十",
+    "romaji": "juu",
+    "suara": "juu_3",
+    "level": 1
+  },
+  {
+    "huruf": "日",
+    "romaji": "hi",
+    "suara": "hi_3",
+    "level": 2
+  },
+  {
+    "huruf": "月",
+    "romaji": "tsuki",
+    "suara": "tsuki_3",
+    "level": 2
+  },
+  {
+    "huruf": "火",
+    "romaji": "hi2",
+    "suara": "hi2_3",
+    "level": 2
+  },
+  {
+    "huruf": "水",
+    "romaji": "mizu",
+    "suara": "mizu_3",
+    "level": 2
+  },
+  {
+    "huruf": "木",
+    "romaji": "ki",
+    "suara": "ki_3",
+    "level": 2
+  },
+  {
+    "huruf": "金",
+    "romaji": "kin",
+    "suara": "kin_3",
+    "level": 2
+  },
+  {
+    "huruf": "土",
+    "romaji": "tsuchi",
+    "suara": "tsuchi_3",
+    "level": 2
+  },
+  {
+    "huruf": "山",
+    "romaji": "yama",
+    "suara": "yama_3",
+    "level": 2
+  },
+  {
+    "huruf": "川",
+    "romaji": "kawa",
+    "suara": "kawa_3",
+    "level": 2
+  },
+  {
+    "huruf": "天",
+    "romaji": "ten",
+    "suara": "ten_3",
+    "level": 2
+  },
+  {
+    "huruf": "中",
+    "romaji": "naka",
+    "suara": "naka_3",
+    "level": 3
+  },
+  {
+    "huruf": "大",
+    "romaji": "oo",
+    "suara": "oo_3",
+    "level": 3
+  },
+  {
+    "huruf": "小",
+    "romaji": "chiisai",
+    "suara": "chiisai_3",
+    "level": 3
+  },
+  {
+    "huruf": "本",
+    "romaji": "hon",
+    "suara": "hon_3",
+    "level": 3
+  },
+  {
+    "huruf": "今",
+    "romaji": "ima",
+    "suara": "ima_3",
+    "level": 3
+  },
+  {
+    "huruf": "年",
+    "romaji": "toshi",
+    "suara": "toshi_3",
+    "level": 3
+  },
+  {
+    "huruf": "時",
+    "romaji": "toki",
+    "suara": "toki_3",
+    "level": 3
+  },
+  {
+    "huruf": "間",
+    "romaji": "aida",
+    "suara": "aida_3",
+    "level": 3
+  },
+  {
+    "huruf": "先",
+    "romaji": "saki",
+    "suara": "saki_3",
+    "level": 3
+  },
+  {
+    "huruf": "生",
+    "romaji": "ikiru",
+    "suara": "ikiru_3",
+    "level": 3
+  },
+  {
+    "huruf": "学",
+    "romaji": "manabu",
+    "suara": "manabu_3",
+    "level": 4
+  },
+  {
+    "huruf": "校",
+    "romaji": "kou",
+    "suara": "kou_3",
+    "level": 4
+  },
+  {
+    "huruf": "友",
+    "romaji": "tomo",
+    "suara": "tomo_3",
+    "level": 4
+  },
+  {
+    "huruf": "見",
+    "romaji": "miru",
+    "suara": "miru_3",
+    "level": 4
+  },
+  {
+    "huruf": "行",
+    "romaji": "iku",
+    "suara": "iku_3",
+    "level": 4
+  },
+  {
+    "huruf": "食",
+    "romaji": "taberu",
+    "suara": "taberu_3",
+    "level": 4
+  },
+  {
+    "huruf": "飲",
+    "romaji": "nomu",
+    "suara": "nomu_3",
+    "level": 4
+  },
+  {
+    "huruf": "話",
+    "romaji": "hanasu",
+    "suara": "hanasu_3",
+    "level": 4
+  },
+  {
+    "huruf": "語",
+    "romaji": "go",
+    "suara": "go_3",
+    "level": 4
+  },
+  {
+    "huruf": "名",
+    "romaji": "na",
+    "suara": "na_3",
+    "level": 4
+  },
+  {
+    "huruf": "男",
+    "romaji": "otoko",
+    "suara": "otoko_3",
+    "level": 5
+  },
+  {
+    "huruf": "女",
+    "romaji": "onna",
+    "suara": "onna_3",
+    "level": 5
+  },
+  {
+    "huruf": "子",
+    "romaji": "ko",
+    "suara": "ko_3",
+    "level": 5
+  },
+  {
+    "huruf": "父",
+    "romaji": "chichi",
+    "suara": "chichi_3",
+    "level": 5
+  },
+  {
+    "huruf": "母",
+    "romaji": "haha",
+    "suara": "haha_3",
+    "level": 5
+  },
+  {
+    "huruf": "兄",
+    "romaji": "ani",
+    "suara": "ani_3",
+    "level": 5
+  },
+  {
+    "huruf": "姉",
+    "romaji": "ane",
+    "suara": "ane_3",
+    "level": 5
+  },
+  {
+    "huruf": "弟",
+    "romaji": "otouto",
+    "suara": "otouto_3",
+    "level": 5
+  },
+  {
+    "huruf": "妹",
+    "romaji": "imouto",
+    "suara": "imouto_3",
+    "level": 5
+  },
+  {
+    "huruf": "家",
+    "romaji": "ie",
+    "suara": "ie_3",
+    "level": 5
+  },
+  {
+    "huruf": "車",
+    "romaji": "kuruma",
+    "suara": "kuruma_3",
+    "level": 6
+  },
+  {
+    "huruf": "電",
+    "romaji": "den",
+    "suara": "den_3",
+    "level": 6
+  },
+  {
+    "huruf": "気",
+    "romaji": "ki2",
+    "suara": "ki2_3",
+    "level": 6
+  },
+  {
+    "huruf": "空",
+    "romaji": "sora",
+    "suara": "sora_3",
+    "level": 6
+  },
+  {
+    "huruf": "雨",
+    "romaji": "ame",
+    "suara": "ame_3",
+    "level": 6
+  },
+  {
+    "huruf": "音",
+    "romaji": "oto",
+    "suara": "oto_3",
+    "level": 6
+  },
+  {
+    "huruf": "読",
+    "romaji": "yomu",
+    "suara": "yomu_3",
+    "level": 6
+  },
+  {
+    "huruf": "書",
+    "romaji": "kaku",
+    "suara": "kaku_3",
+    "level": 6
+  },
+  {
+    "huruf": "聞",
+    "romaji": "kiku",
+    "suara": "kiku_3",
+    "level": 6
+  },
+  {
+    "huruf": "立",
+    "romaji": "tatsu",
+    "suara": "tatsu_3",
+    "level": 6
+  },
+  {
+    "huruf": "入",
+    "romaji": "iru",
+    "suara": "iru_3",
+    "level": 7
+  },
+  {
+    "huruf": "出",
+    "romaji": "deru",
+    "suara": "deru_3",
+    "level": 7
+  },
+  {
+    "huruf": "買",
+    "romaji": "kau",
+    "suara": "kau_3",
+    "level": 7
+  },
+  {
+    "huruf": "売",
+    "romaji": "uru",
+    "suara": "uru_3",
+    "level": 7
+  },
+  {
+    "huruf": "店",
+    "romaji": "mise",
+    "suara": "mise_3",
+    "level": 7
+  },
+  {
+    "huruf": "駅",
+    "romaji": "eki",
+    "suara": "eki_3",
+    "level": 7
+  },
+  {
+    "huruf": "道",
+    "romaji": "michi",
+    "suara": "michi_3",
+    "level": 7
+  },
+  {
+    "huruf": "歩",
+    "romaji": "aruku",
+    "suara": "aruku_3",
+    "level": 7
+  },
+  {
+    "huruf": "走",
+    "romaji": "hashiru",
+    "suara": "hashiru_3",
+    "level": 7
+  },
+  {
+    "huruf": "止",
+    "romaji": "tomeru",
+    "suara": "tomeru_3",
+    "level": 7
+  },
+  {
+    "huruf": "白",
+    "romaji": "shiro",
+    "suara": "shiro_3",
+    "level": 8
+  },
+  {
+    "huruf": "黒",
+    "romaji": "kuro",
+    "suara": "kuro_3",
+    "level": 8
+  },
+  {
+    "huruf": "赤",
+    "romaji": "aka",
+    "suara": "aka_3",
+    "level": 8
+  },
+  {
+    "huruf": "青",
+    "romaji": "ao",
+    "suara": "ao_3",
+    "level": 8
+  },
+  {
+    "huruf": "色",
+    "romaji": "iro",
+    "suara": "iro_3",
+    "level": 8
+  },
+  {
+    "huruf": "高",
+    "romaji": "takai",
+    "suara": "takai_3",
+    "level": 8
+  },
+  {
+    "huruf": "安",
+    "romaji": "yasui",
+    "suara": "yasui_3",
+    "level": 8
+  },
+  {
+    "huruf": "多",
+    "romaji": "ooku",
+    "suara": "ooku_3",
+    "level": 8
+  },
+  {
+    "huruf": "少",
+    "romaji": "sukunai",
+    "suara": "sukunai_3",
+    "level": 8
+  },
+  {
+    "huruf": "長",
+    "romaji": "nagai",
+    "suara": "nagai_3",
+    "level": 8
+  },
+  {
+    "huruf": "新",
+    "romaji": "atarashii",
+    "suara": "atarashii_3",
+    "level": 9
+  },
+  {
+    "huruf": "古",
+    "romaji": "furui",
+    "suara": "furui_3",
+    "level": 9
+  },
+  {
+    "huruf": "朝",
+    "romaji": "asa",
+    "suara": "asa_3",
+    "level": 9
+  },
+  {
+    "huruf": "昼",
+    "romaji": "hiru",
+    "suara": "hiru_3",
+    "level": 9
+  },
+  {
+    "huruf": "夜",
+    "romaji": "yoru",
+    "suara": "yoru_3",
+    "level": 9
+  },
+  {
+    "huruf": "週",
+    "romaji": "shuu",
+    "suara": "shuu_3",
+    "level": 9
+  },
+  {
+    "huruf": "月",
+    "romaji": "getsu",
+    "suara": "getsu_3",
+    "level": 9
+  },
+  {
+    "huruf": "火",
+    "romaji": "ka",
+    "suara": "ka_3",
+    "level": 9
+  },
+  {
+    "huruf": "水",
+    "romaji": "sui",
+    "suara": "sui_3",
+    "level": 9
+  },
+  {
+    "huruf": "木",
+    "romaji": "moku",
+    "suara": "moku_3",
+    "level": 9
+  },
+  {
+    "huruf": "金",
+    "romaji": "kin2",
+    "suara": "kin2_3",
+    "level": 10
+  },
+  {
+    "huruf": "土",
+    "romaji": "do",
+    "suara": "do_3",
+    "level": 10
+  },
+  {
+    "huruf": "曜",
+    "romaji": "you",
+    "suara": "you_3",
+    "level": 10
+  },
+  {
+    "huruf": "春",
+    "romaji": "haru",
+    "suara": "haru_3",
+    "level": 10
+  },
+  {
+    "huruf": "夏",
+    "romaji": "natsu",
+    "suara": "natsu_3",
+    "level": 10
+  },
+  {
+    "huruf": "秋",
+    "romaji": "aki",
+    "suara": "aki_3",
+    "level": 10
+  },
+  {
+    "huruf": "冬",
+    "romaji": "fuyu",
+    "suara": "fuyu_3",
+    "level": 10
+  },
+  {
+    "huruf": "東",
+    "romaji": "higashi",
+    "suara": "higashi_3",
+    "level": 10
+  },
+  {
+    "huruf": "西",
+    "romaji": "nishi",
+    "suara": "nishi_3",
+    "level": 10
+  },
+  {
+    "huruf": "南",
+    "romaji": "minami",
+    "suara": "minami_3",
+    "level": 10
+  }
+]
