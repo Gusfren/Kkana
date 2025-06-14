@@ -18,7 +18,7 @@ class HurufAdapter(
     inner class HurufViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val huruf: TextView = itemView.findViewById(R.id.tvHuruf)
         val romaji: TextView = itemView.findViewById(R.id.tvRomaji)
-        val btnPlayAudio: ImageView = itemView.findViewById(R.id.btnPlayAudio)
+        val speaker: ImageView = itemView.findViewById(R.id.btnSpeaker)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HurufViewHolder {
@@ -31,17 +31,12 @@ class HurufAdapter(
         holder.huruf.text = huruf.huruf
         holder.romaji.text = huruf.romaji
 
-        holder.btnPlayAudio.setOnClickListener {
-            val resId = context.resources.getIdentifier(
-                huruf.suara.substringBefore("."),
-                "raw",
-                context.packageName
-            )
-
+        holder.speaker.setOnClickListener {
+            val resId = context.resources.getIdentifier(huruf.suara, "raw", context.packageName)
             if (resId != 0) {
-                val mediaPlayer = MediaPlayer.create(context, resId)
-                mediaPlayer.setOnCompletionListener { it.release() }
-                mediaPlayer.start()
+                val mp = MediaPlayer.create(context, resId)
+                mp.start()
+                mp.setOnCompletionListener { it.release() }
             }
         }
     }

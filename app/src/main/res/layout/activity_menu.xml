@@ -8,43 +8,29 @@
     android:padding="24dp">
 
     <Button
-        android:id="@+id/btnBelajarHiragana"
+        android:id="@+id/btnHiragana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Belajar Hiragana"
-        android:layout_marginBottom="12dp"/>
+        android:text="Hiragana\nひらがな"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
 
     <Button
-        android:id="@+id/btnBelajarKatakana"
+        android:id="@+id/btnKatakana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Belajar Katakana"
-        android:layout_marginBottom="12dp"/>
+        android:text="Katakana\nカタカナ"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
 
     <Button
-        android:id="@+id/btnBelajarKanji"
+        android:id="@+id/btnKanji"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Belajar Kanji" />
+        android:text="Kanji\n漢字"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btnKuisHiragana"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kuis Hiragana"
-        android:layout_marginTop="12dp" />
-
-    <Button
-        android:id="@+id/btnKuisKatakana"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kuis Katakana"
-        android:layout_marginTop="12dp" />
-
-    <Button
-        android:id="@+id/btnKuisKanji"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kuis Kanji"
-        android:layout_marginTop="12dp" />
 </LinearLayout>
