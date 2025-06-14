@@ -1,36 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layoutMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:fillViewport="true">
 
-    <Button
-        android:id="@+id/btnHiragana"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hiragana\nひらがな"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnKatakana"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Katakana\nカタカナ"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp" />
+        <LinearLayout
+            android:id="@+id/progressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnKanji"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kanji\n漢字"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress Belajar Keseluruhan"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
 
-</LinearLayout>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#E0E0E0"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#2196F3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level: Pemula"
+                    android:textColor="#555"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvKata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/0 kata • 0/0 kuis"
+                    android:textColor="#555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnHiragana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hiragana\nひらがな"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnKatakana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Katakana\nカタカナ"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnKanji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kanji\n漢字"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+</ScrollView>

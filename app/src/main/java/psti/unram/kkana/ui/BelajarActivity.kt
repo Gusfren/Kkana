@@ -19,6 +19,7 @@ class BelajarActivity : AppCompatActivity() {
         val listHuruf = HurufData.loadHuruf(this, jenisHuruf)
 
         recyclerView.layoutManager = GridLayoutManager(this, 2)
-        recyclerView.adapter = HurufAdapter(this, listHuruf)
+        recyclerView.adapter = HurufAdapter(this, listHuruf, jenisHuruf)
+
     }
 }

@@ -9,10 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import psti.unram.kkana.R
+import psti.unram.kkana.utils.ProgressUtil
 
 class HurufAdapter(
     private val context: Context,
-    private val listHuruf: List<Huruf>
+    private val listHuruf: List<Huruf>,
+    private val jenisHuruf: String // diperlukan untuk mencatat progress
 ) : RecyclerView.Adapter<HurufAdapter.HurufViewHolder>() {
 
     inner class HurufViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -37,6 +39,9 @@ class HurufAdapter(
                 val mp = MediaPlayer.create(context, resId)
                 mp.start()
                 mp.setOnCompletionListener { it.release() }
+
+                // Catat progress jika belum pernah dipelajari
+                ProgressUtil.tandaiHurufDipelajari(context, jenisHuruf, huruf.romaji)
             }
         }
     }

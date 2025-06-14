@@ -3,7 +3,39 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:elevation="4dp">
+
+    <ProgressBar
+        android:id="@+id/dialogProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:progressTint="#4CAF50"
+        android:backgroundTint="#D7D7D7"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/dialogLevelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level: "
+        android:textSize="14sp"
+        android:textColor="#777"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/dialogProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress: 0/0"
+        android:textSize="13sp"
+        android:textColor="#666"
+        android:layout_marginBottom="16dp" />
+
     <Button
         android:id="@+id/btnBelajar"
         android:layout_width="match_parent"

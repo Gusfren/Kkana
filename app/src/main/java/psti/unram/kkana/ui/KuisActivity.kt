@@ -10,6 +10,7 @@ import kotlin.random.Random
 import android.media.MediaPlayer
 import android.content.Intent
 import psti.unram.kkana.utils.ScoreManager
+import psti.unram.kkana.utils.ProgressUtil
 
 class KuisActivity : AppCompatActivity() {
 
@@ -75,6 +76,7 @@ class KuisActivity : AppCompatActivity() {
     private fun tampilkanSoalBaru() {
         if (totalSoal >= batasSoal) {
             ScoreManager.setHighScore(this, jenisHuruf, level, skor)
+            psti.unram.kkana.utils.ProgressUtil.tandaiLevelKuisSelesai(this, jenisHuruf, level)
 
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("skor", skor)
