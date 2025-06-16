@@ -1,19 +1,16 @@
 package psti.unram.kkana.auth
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import psti.unram.kkana.R
 import android.content.Intent
+import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import psti.unram.kkana.R
 import psti.unram.kkana.ui.MenuActivity
-
+import psti.unram.kkana.utils.PrefManager
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -36,6 +33,15 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
+                        val user = auth.currentUser
+                        val uid = user?.uid ?: ""
+                        val userEmail = user?.email ?: ""
+                        val displayName = user?.displayName ?: "User"
+
+                        // Simpan ke SharedPreferences
+                        val prefManager = PrefManager(this)
+                        prefManager.saveUser(uid, userEmail, displayName)
+
                         Toast.makeText(this, "Login sukses", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this, MenuActivity::class.java))
                         finish()
@@ -47,6 +53,15 @@ class LoginActivity : AppCompatActivity() {
 
         goToRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            startActivity(Intent(this, MenuActivity::class.java))
+            finish()
         }
     }
 }

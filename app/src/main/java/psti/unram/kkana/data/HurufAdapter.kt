@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import psti.unram.kkana.R
 import psti.unram.kkana.utils.ProgressUtil
+import com.google.firebase.auth.FirebaseAuth
 
 class HurufAdapter(
     private val context: Context,
@@ -41,7 +42,8 @@ class HurufAdapter(
                 mp.setOnCompletionListener { it.release() }
 
                 // Catat progress jika belum pernah dipelajari
-                ProgressUtil.tandaiHurufDipelajari(context, jenisHuruf, huruf.romaji)
+                val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@setOnClickListener
+                ProgressUtil.tandaiHurufDipelajari(context, jenisHuruf, huruf.romaji, uid)
             }
         }
     }

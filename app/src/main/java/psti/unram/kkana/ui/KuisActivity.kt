@@ -11,6 +11,7 @@ import android.media.MediaPlayer
 import android.content.Intent
 import psti.unram.kkana.utils.ScoreManager
 import psti.unram.kkana.utils.ProgressUtil
+import com.google.firebase.auth.FirebaseAuth
 
 class KuisActivity : AppCompatActivity() {
 
@@ -76,7 +77,8 @@ class KuisActivity : AppCompatActivity() {
     private fun tampilkanSoalBaru() {
         if (totalSoal >= batasSoal) {
             ScoreManager.setHighScore(this, jenisHuruf, level, skor)
-            psti.unram.kkana.utils.ProgressUtil.tandaiLevelKuisSelesai(this, jenisHuruf, level)
+            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+            ProgressUtil.tandaiLevelKuisSelesai(this, jenisHuruf, level, uid)
 
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("skor", skor)

@@ -6,7 +6,9 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import psti.unram.kkana.R
+import com.google.firebase.auth.FirebaseAuth
 import psti.unram.kkana.utils.ProgressUtil
+import psti.unram.kkana.auth.LoginActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -17,13 +19,32 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var tvLevel: TextView
     private lateinit var tvKata: TextView
 
+    private lateinit var uid: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+            return
+        }
+
+        uid = user.uid
+
         btnHiragana = findViewById(R.id.btnHiragana)
         btnKatakana = findViewById(R.id.btnKatakana)
         btnKanji = findViewById(R.id.btnKanji)
+
+        val logoutBtn = findViewById<Button>(R.id.logoutButton)
+        logoutBtn.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+
         progressBar = findViewById(R.id.progressBar)
         tvLevel = findViewById(R.id.tvLevel)
         tvKata = findViewById(R.id.tvKata)
@@ -44,22 +65,17 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun updateProgressGabungan() {
-        val (jumlahKata, totalKata) = ProgressUtil.getProgressGabungan(this)
-        val (jumlahKuis, totalKuis) = ProgressUtil.getKuisProgressGabungan(this)
+        val (jumlahKata, totalKata) = ProgressUtil.getProgressGabungan(this, uid)
+        val (jumlahKuis, totalKuis) = ProgressUtil.getKuisProgressGabungan(this, uid)
 
         val persenKata = if (totalKata > 0) (jumlahKata * 100 / totalKata) else 0
         val persenKuis = if (totalKuis > 0) (jumlahKuis * 100 / totalKuis) else 0
         val rataRata = (persenKata + persenKuis) / 2
 
         progressBar.progress = rataRata
-
-        // Gunakan fungsi ini untuk status level
         tvLevel.text = getLevelText(rataRata)
-
         tvKata.text = "$jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
     }
-
-
 
     private fun tampilkanPilihan(jenisHuruf: String) {
         val namaHuruf = when (jenisHuruf) {
@@ -75,9 +91,9 @@ class MenuActivity : AppCompatActivity() {
         val progressBarDialog = dialogView.findViewById<ProgressBar>(R.id.dialogProgressBar)
         val progressText = dialogView.findViewById<TextView>(R.id.dialogProgressText)
 
-        val jumlahKata = ProgressUtil.getJumlahDipelajari(this, jenisHuruf)
+        val jumlahKata = ProgressUtil.getJumlahDipelajari(this, jenisHuruf, uid)
         val totalKata = ProgressUtil.getTotalHuruf(this, jenisHuruf)
-        val jumlahKuis = ProgressUtil.getJumlahLevelKuisSelesai(this, jenisHuruf)
+        val jumlahKuis = ProgressUtil.getJumlahLevelKuisSelesai(this, jenisHuruf, uid)
         val totalKuis = 10
 
         val persenKata = if (totalKata > 0) (jumlahKata * 100 / totalKata) else 0
@@ -111,6 +127,7 @@ class MenuActivity : AppCompatActivity() {
 
         alertDialog.show()
     }
+
     private fun getLevelText(persen: Int): String {
         return when {
             persen < 25 -> "Level: Pemula"
