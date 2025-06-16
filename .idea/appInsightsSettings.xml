@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="psti.unram.kkana" />
+                  <option name="mobileSdkAppId" value="1:492923659504:android:d727e05fcf8422fc0dce35" />
+                  <option name="projectId" value="kkana-1db73" />
+                  <option name="projectNumber" value="492923659504" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

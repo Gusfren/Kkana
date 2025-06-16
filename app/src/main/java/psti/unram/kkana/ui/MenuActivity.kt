@@ -90,6 +90,7 @@ class MenuActivity : AppCompatActivity() {
         val btnKuis = dialogView.findViewById<Button>(R.id.btnKuis)
         val progressBarDialog = dialogView.findViewById<ProgressBar>(R.id.dialogProgressBar)
         val progressText = dialogView.findViewById<TextView>(R.id.dialogProgressText)
+        val levelText = dialogView.findViewById<TextView>(R.id.dialogLevelText) // <- ini baris tambahan
 
         val jumlahKata = ProgressUtil.getJumlahDipelajari(this, jenisHuruf, uid)
         val totalKata = ProgressUtil.getTotalHuruf(this, jenisHuruf)
@@ -102,6 +103,7 @@ class MenuActivity : AppCompatActivity() {
 
         progressBarDialog.progress = rataRata
         progressText.text = "Progress: $jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
+        levelText.text = getLevelText(rataRata) // <- ini baris tambahan
 
         val alertDialog = AlertDialog.Builder(this)
             .setTitle("Pilih Mode $namaHuruf")
