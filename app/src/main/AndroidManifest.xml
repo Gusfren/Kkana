@@ -12,36 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkana"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.LevelActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.KuisActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.BelajarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.MenuActivity"
-            android:exported="true">
+
+        <activity android:name=".ui.LevelActivity" android:exported="false" />
+        <activity android:name=".ui.ResultActivity" android:exported="false" />
+        <activity android:name=".ui.KuisActivity" android:exported="false" />
+        <activity android:name=".ui.BelajarActivity" android:exported="false" />
+        <activity android:name=".auth.RegisterActivity" android:exported="false" />
+
+        <!-- 🚀 Ubah LoginActivity jadi Launcher -->
+        <activity android:name=".auth.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- 🛑 Hapus intent-filter dari MenuActivity -->
+        <activity android:name=".ui.MenuActivity" android:exported="false" />
+
+        <activity android:name=".ui.MainActivity" android:exported="false" />
+    </application>
 </manifest>
