@@ -85,6 +85,7 @@ class MenuActivity : AppCompatActivity() {
             else -> "Huruf"
         }
 
+
         val dialogView = layoutInflater.inflate(R.layout.dialog_pilihan, null)
         val btnBelajar = dialogView.findViewById<Button>(R.id.btnBelajar)
         val btnKuis = dialogView.findViewById<Button>(R.id.btnKuis)
