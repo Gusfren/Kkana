@@ -3,21 +3,78 @@
     android:id="@+id/layoutMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="#FFFFFF"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:padding="16dp">
 
+        <!-- Header with Shadow -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kanakata"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF4081"
+                android:gravity="left"
+                android:layout_marginStart="8dp" />
+
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Profile"
+                android:padding="8dp" />
+        </LinearLayout>
+
+
+        <!-- Greeting -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="こんにちは, User!"
+            android:textStyle="bold"
+            android:textColor="#FF4081"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lanjutkan perjalanan belajar bahasa Jepangmu"
+            android:textColor="#666"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+
+        <!-- Progress Belajar -->
         <LinearLayout
             android:id="@+id/progressContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/bg_card"
             android:elevation="2dp"
             android:orientation="vertical"
@@ -41,8 +98,8 @@
                 android:layout_marginBottom="12dp"
                 android:backgroundTint="#E0E0E0"
                 android:max="100"
-                android:progress="0"
-                android:progressTint="#2196F3" />
+                android:progress="45"
+                android:progressTint="#FF4081" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,11 +119,12 @@
                     android:id="@+id/tvKata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0/0 kata • 0/0 kuis"
+                    android:text="120/350 kata"
                     android:textColor="#555"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
+
 
         <Button
             android:id="@+id/btnHiragana"
