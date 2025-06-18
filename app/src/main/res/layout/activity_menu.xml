@@ -178,7 +178,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="46 karakter dasar"
+                        android:text="ひらがな"
                         android:textColor="#666"
                         android:layout_gravity="center_horizontal"
                         android:textSize="14sp" />
@@ -223,7 +223,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="46 karakter dasar"
+                        android:text="カタカナ"
                         android:layout_gravity="center_horizontal"
                         android:textColor="#666"
                         android:textSize="14sp" />
@@ -266,7 +266,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2000+ karakter"
+                        android:text="漢字"
                         android:layout_gravity="center_horizontal"
                         android:textColor="#666"
                         android:textSize="14sp" />
