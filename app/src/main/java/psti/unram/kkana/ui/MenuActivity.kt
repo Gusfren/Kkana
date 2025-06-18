@@ -12,9 +12,9 @@ import psti.unram.kkana.auth.LoginActivity
 
 class MenuActivity : AppCompatActivity() {
 
-    private lateinit var btnHiragana: Button
-    private lateinit var btnKatakana: Button
-    private lateinit var btnKanji: Button
+    private lateinit var btnHiragana: LinearLayout
+    private lateinit var btnKatakana: LinearLayout
+    private lateinit var btnKanji: LinearLayout
     private lateinit var progressBar: ProgressBar
     private lateinit var tvLevel: TextView
     private lateinit var tvKata: TextView
@@ -90,7 +90,7 @@ class MenuActivity : AppCompatActivity() {
         val btnKuis = dialogView.findViewById<Button>(R.id.btnKuis)
         val progressBarDialog = dialogView.findViewById<ProgressBar>(R.id.dialogProgressBar)
         val progressText = dialogView.findViewById<TextView>(R.id.dialogProgressText)
-        val levelText = dialogView.findViewById<TextView>(R.id.dialogLevelText) // <- ini baris tambahan
+        val levelText = dialogView.findViewById<TextView>(R.id.dialogLevelText)
 
         val jumlahKata = ProgressUtil.getJumlahDipelajari(this, jenisHuruf, uid)
         val totalKata = ProgressUtil.getTotalHuruf(this, jenisHuruf)
@@ -103,7 +103,7 @@ class MenuActivity : AppCompatActivity() {
 
         progressBarDialog.progress = rataRata
         progressText.text = "Progress: $jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
-        levelText.text = getLevelText(rataRata) // <- ini baris tambahan
+        levelText.text = getLevelText(rataRata)
 
         val alertDialog = AlertDialog.Builder(this)
             .setTitle("Pilih Mode $namaHuruf")

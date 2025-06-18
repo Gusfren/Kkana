@@ -125,32 +125,148 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- PILIH MATERI BELAJAR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Materi Belajar"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/btnHiragana"
+        <!-- Container Materi -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hiragana\nひらがな"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:layout_marginBottom="16dp" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnKatakana"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Katakana\nカタカナ"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:layout_marginBottom="16dp" />
+            <!-- Card Hiragana -->
+            <LinearLayout
+                android:id="@+id/btnHiragana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
 
-        <Button
-            android:id="@+id/btnKanji"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kanji\n漢字"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="あ"
+                    android:textSize="28sp"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hiragana"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="46 karakter dasar"
+                        android:textColor="#666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Card Katakana -->
+            <LinearLayout
+                android:id="@+id/btnKatakana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ア"
+                    android:textSize="28sp"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Katakana"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="46 karakter dasar"
+                        android:textColor="#666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Card Kanji -->
+            <LinearLayout
+                android:id="@+id/btnKanji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="漢"
+                    android:textSize="28sp"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kanji"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000+ karakter"
+                        android:textColor="#666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/logoutButton"
