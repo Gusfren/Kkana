@@ -172,13 +172,15 @@
                         android:text="Hiragana"
                         android:textStyle="bold"
                         android:textColor="#222"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="46 karakter dasar"
                         android:textColor="#666"
+                        android:layout_gravity="center_horizontal"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -215,12 +217,14 @@
                         android:text="Katakana"
                         android:textStyle="bold"
                         android:textColor="#222"
+                        android:layout_gravity="center_horizontal"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="46 karakter dasar"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#666"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -254,6 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kanji"
+                        android:layout_gravity="center_horizontal"
                         android:textStyle="bold"
                         android:textColor="#222"
                         android:textSize="16sp" />
@@ -262,6 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2000+ karakter"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#666"
                         android:textSize="14sp" />
                 </LinearLayout>
