@@ -58,10 +58,16 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
+        // Cek apakah datang dari register
+        val fromRegister = intent.getBooleanExtra("fromRegister", false)
+
         val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
+        if (user != null && !fromRegister) {
+            // Auto-login hanya kalau BUKAN dari register
             startActivity(Intent(this, MenuActivity::class.java))
             finish()
         }
     }
+
 }

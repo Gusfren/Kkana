@@ -71,7 +71,9 @@ class RegisterActivity : AppCompatActivity() {
                             }
 
                         // Arahkan ke login
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        val intent = Intent(this, LoginActivity::class.java)
+                        intent.putExtra("fromRegister", true)
+                        startActivity(intent)
                         finish()
                     } else {
                         Toast.makeText(
