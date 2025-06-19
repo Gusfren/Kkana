@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import psti.unram.kkana.R
 import com.google.firebase.auth.FirebaseAuth
-import psti.unram.kkana.utils.ProgressUtil
+import psti.unram.kkana.R
 import psti.unram.kkana.auth.LoginActivity
+import psti.unram.kkana.utils.ProgressUtil
 
 class MenuActivity : AppCompatActivity() {
 
@@ -18,6 +18,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var tvLevel: TextView
     private lateinit var tvKata: TextView
+    private lateinit var profileIcon: ImageView
 
     private lateinit var uid: String
 
@@ -34,16 +35,14 @@ class MenuActivity : AppCompatActivity() {
 
         uid = user.uid
 
+        profileIcon = findViewById(R.id.profileIcon)
+        profileIcon.setOnClickListener {
+            startActivity(Intent(this, ProfilActivity::class.java))
+        }
+
         btnHiragana = findViewById(R.id.btnHiragana)
         btnKatakana = findViewById(R.id.btnKatakana)
         btnKanji = findViewById(R.id.btnKanji)
-
-        val logoutBtn = findViewById<Button>(R.id.logoutButton)
-        logoutBtn.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
 
         progressBar = findViewById(R.id.progressBar)
         tvLevel = findViewById(R.id.tvLevel)
@@ -63,6 +62,12 @@ class MenuActivity : AppCompatActivity() {
             tampilkanPilihan("kanji")
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        updateProgressGabungan()
+    }
+
 
     private fun updateProgressGabungan() {
         val (jumlahKata, totalKata) = ProgressUtil.getProgressGabungan(this, uid)
@@ -84,7 +89,6 @@ class MenuActivity : AppCompatActivity() {
             "kanji" -> "Kanji"
             else -> "Huruf"
         }
-
 
         val dialogView = layoutInflater.inflate(R.layout.dialog_pilihan, null)
         val btnBelajar = dialogView.findViewById<Button>(R.id.btnBelajar)

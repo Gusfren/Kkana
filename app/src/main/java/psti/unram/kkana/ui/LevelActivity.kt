@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import psti.unram.kkana.R
 import psti.unram.kkana.utils.ScoreManager
 
@@ -16,6 +17,7 @@ class LevelActivity : AppCompatActivity() {
         setContentView(R.layout.activity_level)
 
         val jenisHuruf = intent.getStringExtra("jenisHuruf") ?: "hiragana"
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
         for (i in 1..10) {
             val btnId = resources.getIdentifier("btnLevel$i", "id", packageName)
@@ -26,7 +28,7 @@ class LevelActivity : AppCompatActivity() {
             val tv = findViewById<TextView>(tvId)
             val iv = findViewById<ImageView>(ivId)
 
-            val highScore = ScoreManager.getHighScore(this, jenisHuruf, i)
+            val highScore = ScoreManager.getHighScore(this, jenisHuruf, i, uid)
             tv.text = "Skor tertinggi: $highScore"
             iv.setImageResource(getStarDrawable(highScore))
 
@@ -34,9 +36,11 @@ class LevelActivity : AppCompatActivity() {
                 val intent = Intent(this, KuisActivity::class.java)
                 intent.putExtra("jenisHuruf", jenisHuruf)
                 intent.putExtra("level", i)
+                intent.putExtra("uid", uid)
                 startActivity(intent)
                 finish()
             }
+
         }
     }
 

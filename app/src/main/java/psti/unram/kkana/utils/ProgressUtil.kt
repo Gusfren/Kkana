@@ -62,10 +62,21 @@ object ProgressUtil {
 
     fun resetProgress(context: Context, jenisHuruf: String, uid: String) {
         val prefs = context.getSharedPreferences(getPrefsName(uid), Context.MODE_PRIVATE)
-        prefs.edit()
-            .remove("set_$jenisHuruf")
-            .apply()
+        val editor = prefs.edit()
+
+        // Reset huruf dipelajari
+        editor.remove("set_$jenisHuruf")
+
+        // Reset kuis level selesai
+        for (i in 1..10) {
+            editor.remove("kuis_${jenisHuruf}_level_$i")
+        }
+
+        editor.apply()
     }
+
+
+
 
     fun getProgressGabungan(context: Context, uid: String): Pair<Int, Int> {
         val jenis = listOf("hiragana", "katakana", "kanji")

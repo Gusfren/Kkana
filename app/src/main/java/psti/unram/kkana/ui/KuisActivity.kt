@@ -28,6 +28,7 @@ class KuisActivity : AppCompatActivity() {
 
     private lateinit var jenisHuruf: String
     private var level: Int = 1
+    private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +41,7 @@ class KuisActivity : AppCompatActivity() {
 
         jenisHuruf = intent.getStringExtra("jenisHuruf") ?: "hiragana"
         level = intent.getIntExtra("level", 1)
+        uid = intent.getStringExtra("uid") ?: FirebaseAuth.getInstance().currentUser?.uid ?: ""
 
         listHuruf = HurufData.loadHuruf(this, jenisHuruf).filter { it.level <= level }
 
@@ -76,8 +78,8 @@ class KuisActivity : AppCompatActivity() {
 
     private fun tampilkanSoalBaru() {
         if (totalSoal >= batasSoal) {
-            ScoreManager.setHighScore(this, jenisHuruf, level, skor)
-            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+            // Simpan skor dan progress sesuai UID
+            ScoreManager.setHighScore(this, jenisHuruf, level, skor, uid)
             ProgressUtil.tandaiLevelKuisSelesai(this, jenisHuruf, level, uid)
 
             val intent = Intent(this, ResultActivity::class.java)
@@ -85,6 +87,7 @@ class KuisActivity : AppCompatActivity() {
             intent.putExtra("total", batasSoal)
             intent.putExtra("jenisHuruf", jenisHuruf)
             intent.putExtra("level", level)
+            intent.putExtra("uid", uid)
             startActivity(intent)
             finish()
             return
