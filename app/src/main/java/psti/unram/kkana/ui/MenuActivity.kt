@@ -1,14 +1,19 @@
 package psti.unram.kkana.ui
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import psti.unram.kkana.R
 import psti.unram.kkana.auth.LoginActivity
 import psti.unram.kkana.utils.ProgressUtil
+import java.io.File
+import com.bumptech.glide.Glide
+
 
 class MenuActivity : AppCompatActivity() {
 
@@ -19,6 +24,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var tvLevel: TextView
     private lateinit var tvKata: TextView
     private lateinit var profileIcon: ImageView
+    private lateinit var tvUsername: TextView
 
     private lateinit var uid: String
 
@@ -36,6 +42,8 @@ class MenuActivity : AppCompatActivity() {
         uid = user.uid
 
         profileIcon = findViewById(R.id.profileIcon)
+        tvUsername = findViewById(R.id.tvUsername)
+
         profileIcon.setOnClickListener {
             startActivity(Intent(this, ProfilActivity::class.java))
         }
@@ -49,6 +57,7 @@ class MenuActivity : AppCompatActivity() {
         tvKata = findViewById(R.id.tvKata)
 
         updateProgressGabungan()
+        loadProfileData()
 
         btnHiragana.setOnClickListener {
             tampilkanPilihan("hiragana")
@@ -66,8 +75,8 @@ class MenuActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         updateProgressGabungan()
+        loadProfileData() // refresh username dan foto profil saat kembali dari ProfilActivity
     }
-
 
     private fun updateProgressGabungan() {
         val (jumlahKata, totalKata) = ProgressUtil.getProgressGabungan(this, uid)
@@ -81,6 +90,39 @@ class MenuActivity : AppCompatActivity() {
         tvLevel.text = getLevelText(rataRata)
         tvKata.text = "$jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
     }
+
+    private fun loadProfileData() {
+        val firestore = FirebaseFirestore.getInstance()
+        firestore.collection("users").document(uid)
+            .get()
+            .addOnSuccessListener { doc ->
+                if (doc.exists()) {
+                    val username = doc.getString("username") ?: "User"
+                    tvUsername.text = "こんにちは, $username!"
+                } else {
+                    tvUsername.text = "こんにちは, User!"
+                }
+            }
+            .addOnFailureListener {
+                tvUsername.text = "こんにちは, User!"
+            }
+
+        val sharedPref = getSharedPreferences("profil_pref", MODE_PRIVATE)
+        val photoPath = sharedPref.getString("photo_path", null)
+        if (photoPath != null && File(photoPath).exists()) {
+            Glide.with(this)
+                .load(File(photoPath))
+                .circleCrop()
+                .placeholder(R.drawable.default_profile)
+                .into(profileIcon)
+        } else {
+            Glide.with(this)
+                .load(R.drawable.default_profile)
+                .circleCrop()
+                .into(profileIcon)
+        }
+    }
+
 
     private fun tampilkanPilihan(jenisHuruf: String) {
         val namaHuruf = when (jenisHuruf) {
