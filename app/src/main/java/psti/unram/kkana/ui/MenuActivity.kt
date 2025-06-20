@@ -13,6 +13,7 @@ import psti.unram.kkana.auth.LoginActivity
 import psti.unram.kkana.utils.ProgressUtil
 import java.io.File
 import com.bumptech.glide.Glide
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class MenuActivity : AppCompatActivity() {
@@ -152,8 +153,9 @@ class MenuActivity : AppCompatActivity() {
         progressText.text = "Progress: $jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
         levelText.text = getLevelText(rataRata)
 
-        val alertDialog = AlertDialog.Builder(this)
-            .setTitle("Pilih Mode $namaHuruf")
+        // Ubah AlertDialog.Builder menjadi MaterialAlertDialogBuilder dan tambahkan gaya kustom
+        val alertDialog = MaterialAlertDialogBuilder(this, R.style.CustomAlertDialogTheme)
+
             .setView(dialogView)
             .create()
 

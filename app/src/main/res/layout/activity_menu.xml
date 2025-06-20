@@ -12,7 +12,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Header with Shadow -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +48,6 @@
         </LinearLayout>
 
 
-        <!-- Greeting -->
         <TextView
             android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
@@ -69,7 +67,6 @@
             android:layout_marginBottom="12dp" />
 
 
-        <!-- Progress Belajar -->
         <LinearLayout
             android:id="@+id/progressContainer"
             android:layout_width="match_parent"
@@ -126,7 +123,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- PILIH MATERI BELAJAR -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,13 +133,11 @@
             android:layout_marginBottom="12dp" />
 
 
-        <!-- Container Materi -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Card Hiragana -->
             <LinearLayout
                 android:id="@+id/btnHiragana"
                 android:layout_width="match_parent"
@@ -188,7 +182,6 @@
 
             </LinearLayout>
 
-            <!-- Card Katakana -->
             <LinearLayout
                 android:id="@+id/btnKatakana"
                 android:layout_width="match_parent"
@@ -231,7 +224,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Card Kanji -->
             <LinearLayout
                 android:id="@+id/btnKanji"
                 android:layout_width="match_parent"

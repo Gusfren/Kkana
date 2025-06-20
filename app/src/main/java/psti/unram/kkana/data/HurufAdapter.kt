@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.LinearLayout // Import LinearLayout karena kita akan menggunakannya sebagai holder
 import androidx.recyclerview.widget.RecyclerView
 import psti.unram.kkana.R
 import psti.unram.kkana.utils.ProgressUtil
@@ -21,7 +22,8 @@ class HurufAdapter(
     inner class HurufViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val huruf: TextView = itemView.findViewById(R.id.tvHuruf)
         val romaji: TextView = itemView.findViewById(R.id.tvRomaji)
-        val speaker: ImageView = itemView.findViewById(R.id.btnSpeaker)
+        val speaker: ImageView = itemView.findViewById(R.id.btnSpeaker) // Tetap inisialisasi ikon speaker
+        val itemLayout: LinearLayout = itemView.findViewById(R.id.itemHurufLayout) // Inisialisasi LinearLayout baru
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HurufViewHolder {
@@ -34,7 +36,13 @@ class HurufAdapter(
         holder.huruf.text = huruf.huruf
         holder.romaji.text = huruf.romaji
 
-        holder.speaker.setOnClickListener {
+        // HAPUS setOnClickListener dari holder.speaker karena sekarang tidak diklik untuk suara
+        // holder.speaker.setOnClickListener {
+        //     // ... (kode lama yang dihapus)
+        // }
+
+        // Set OnClickListener untuk seluruh item layout
+        holder.itemLayout.setOnClickListener {
             val resId = context.resources.getIdentifier(huruf.suara, "raw", context.packageName)
             if (resId != 0) {
                 val mp = MediaPlayer.create(context, resId)

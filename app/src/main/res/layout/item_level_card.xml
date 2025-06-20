@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvLevelNumber"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level X"  android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivStar"  android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/star_0"
+            android:contentDescription="Bintang Skor"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvScore"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skor tertinggi: 0"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnStartQuiz"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mulai Kuis"
+            android:background="@drawable/button_gradient"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -3,600 +3,700 @@
     "huruf": "一",
     "romaji": "ichi",
     "suara": "ichi_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "satu"
   },
   {
     "huruf": "二",
     "romaji": "ni",
     "suara": "ni_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "dua"
   },
   {
     "huruf": "三",
     "romaji": "san",
     "suara": "san_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "tiga"
   },
   {
     "huruf": "四",
     "romaji": "shi",
     "suara": "shi_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "empat"
   },
   {
     "huruf": "五",
     "romaji": "go",
     "suara": "go_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "lima"
   },
   {
     "huruf": "六",
     "romaji": "roku",
     "suara": "roku_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "enam"
   },
   {
     "huruf": "七",
     "romaji": "shichi",
     "suara": "shichi_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "tujuh"
   },
   {
     "huruf": "八",
     "romaji": "hachi",
     "suara": "hachi_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "delapan"
   },
   {
     "huruf": "九",
     "romaji": "kyuu",
     "suara": "kyuu_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "sembilan"
   },
   {
     "huruf": "十",
     "romaji": "juu",
     "suara": "juu_3",
-    "level": 1
+    "level": 1,
+    "terjemahan": "sepuluh"
   },
   {
     "huruf": "日",
     "romaji": "hi",
     "suara": "hi_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "hari, matahari"
   },
   {
     "huruf": "月",
     "romaji": "tsuki",
     "suara": "tsuki_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "bulan"
   },
   {
     "huruf": "火",
     "romaji": "hi2",
     "suara": "hi2_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "api, Selasa"
   },
   {
     "huruf": "水",
     "romaji": "mizu",
     "suara": "mizu_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "air, Rabu"
   },
   {
     "huruf": "木",
     "romaji": "ki",
     "suara": "ki_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "pohon, kayu, Kamis"
   },
   {
     "huruf": "金",
     "romaji": "kin",
     "suara": "kin_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "emas, uang, Jumat"
   },
   {
     "huruf": "土",
     "romaji": "tsuchi",
     "suara": "tsuchi_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "tanah, Sabtu"
   },
   {
     "huruf": "山",
     "romaji": "yama",
     "suara": "yama_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "gunung"
   },
   {
     "huruf": "川",
     "romaji": "kawa",
     "suara": "kawa_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "sungai"
   },
   {
     "huruf": "天",
     "romaji": "ten",
     "suara": "ten_3",
-    "level": 2
+    "level": 2,
+    "terjemahan": "surga, langit"
   },
   {
     "huruf": "中",
     "romaji": "naka",
     "suara": "naka_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "tengah, di dalam"
   },
   {
     "huruf": "大",
     "romaji": "oo",
     "suara": "oo_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "besar"
   },
   {
     "huruf": "小",
     "romaji": "chiisai",
     "suara": "chiisai_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "kecil"
   },
   {
     "huruf": "本",
     "romaji": "hon",
     "suara": "hon_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "buku, dasar"
   },
   {
     "huruf": "今",
     "romaji": "ima",
     "suara": "ima_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "sekarang"
   },
   {
     "huruf": "年",
     "romaji": "toshi",
     "suara": "toshi_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "tahun"
   },
   {
     "huruf": "時",
     "romaji": "toki",
     "suara": "toki_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "waktu"
   },
   {
     "huruf": "間",
     "romaji": "aida",
     "suara": "aida_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "antara, selang waktu"
   },
   {
     "huruf": "先",
     "romaji": "saki",
     "suara": "saki_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "sebelum, duluan"
   },
   {
     "huruf": "生",
     "romaji": "ikiru",
     "suara": "ikiru_3",
-    "level": 3
+    "level": 3,
+    "terjemahan": "hidup, lahir"
   },
   {
     "huruf": "学",
     "romaji": "manabu",
     "suara": "manabu_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "belajar"
   },
   {
     "huruf": "校",
     "romaji": "kou",
     "suara": "kou_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "sekolah"
   },
   {
     "huruf": "友",
     "romaji": "tomo",
     "suara": "tomo_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "teman"
   },
   {
     "huruf": "見",
     "romaji": "miru",
     "suara": "miru_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "melihat"
   },
   {
     "huruf": "行",
     "romaji": "iku",
     "suara": "iku_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "pergi"
   },
   {
     "huruf": "食",
     "romaji": "taberu",
     "suara": "taberu_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "makan"
   },
   {
     "huruf": "飲",
     "romaji": "nomu",
     "suara": "nomu_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "minum"
   },
   {
     "huruf": "話",
     "romaji": "hanasu",
     "suara": "hanasu_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "berbicara"
   },
   {
     "huruf": "語",
     "romaji": "go",
     "suara": "go_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "bahasa, kata"
   },
   {
     "huruf": "名",
     "romaji": "na",
     "suara": "na_3",
-    "level": 4
+    "level": 4,
+    "terjemahan": "nama"
   },
   {
     "huruf": "男",
     "romaji": "otoko",
     "suara": "otoko_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "laki-laki"
   },
   {
     "huruf": "女",
     "romaji": "onna",
     "suara": "onna_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "perempuan"
   },
   {
     "huruf": "子",
     "romaji": "ko",
     "suara": "ko_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "anak"
   },
   {
     "huruf": "父",
     "romaji": "chichi",
     "suara": "chichi_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "ayah"
   },
   {
     "huruf": "母",
     "romaji": "haha",
     "suara": "haha_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "ibu"
   },
   {
     "huruf": "兄",
     "romaji": "ani",
     "suara": "ani_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "kakak laki-laki"
   },
   {
     "huruf": "姉",
     "romaji": "ane",
     "suara": "ane_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "kakak perempuan"
   },
   {
     "huruf": "弟",
     "romaji": "otouto",
     "suara": "otouto_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "adik laki-laki"
   },
   {
     "huruf": "妹",
     "romaji": "imouto",
     "suara": "imouto_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "adik perempuan"
   },
   {
     "huruf": "家",
     "romaji": "ie",
     "suara": "ie_3",
-    "level": 5
+    "level": 5,
+    "terjemahan": "rumah"
   },
   {
     "huruf": "車",
     "romaji": "kuruma",
     "suara": "kuruma_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "mobil"
   },
   {
     "huruf": "電",
     "romaji": "den",
     "suara": "den_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "listrik, petir"
   },
   {
     "huruf": "気",
     "romaji": "ki2",
     "suara": "ki2_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "semangat, udara"
   },
   {
     "huruf": "空",
     "romaji": "sora",
     "suara": "sora_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "langit, kosong"
   },
   {
     "huruf": "雨",
     "romaji": "ame",
     "suara": "ame_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "hujan"
   },
   {
     "huruf": "音",
     "romaji": "oto",
     "suara": "oto_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "suara"
   },
   {
     "huruf": "読",
     "romaji": "yomu",
     "suara": "yomu_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "membaca"
   },
   {
     "huruf": "書",
     "romaji": "kaku",
     "suara": "kaku_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "menulis"
   },
   {
     "huruf": "聞",
     "romaji": "kiku",
     "suara": "kiku_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "mendengar, bertanya"
   },
   {
     "huruf": "立",
     "romaji": "tatsu",
     "suara": "tatsu_3",
-    "level": 6
+    "level": 6,
+    "terjemahan": "berdiri"
   },
   {
     "huruf": "入",
     "romaji": "iru",
     "suara": "iru_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "masuk"
   },
   {
     "huruf": "出",
     "romaji": "deru",
     "suara": "deru_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "keluar"
   },
   {
     "huruf": "買",
     "romaji": "kau",
     "suara": "kau_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "membeli"
   },
   {
     "huruf": "売",
     "romaji": "uru",
     "suara": "uru_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "menjual"
   },
   {
     "huruf": "店",
     "romaji": "mise",
     "suara": "mise_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "toko"
   },
   {
     "huruf": "駅",
     "romaji": "eki",
     "suara": "eki_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "stasiun"
   },
   {
     "huruf": "道",
     "romaji": "michi",
     "suara": "michi_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "jalan"
   },
   {
     "huruf": "歩",
     "romaji": "aruku",
     "suara": "aruku_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "berjalan"
   },
   {
     "huruf": "走",
     "romaji": "hashiru",
     "suara": "hashiru_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "berlari"
   },
   {
     "huruf": "止",
     "romaji": "tomeru",
     "suara": "tomeru_3",
-    "level": 7
+    "level": 7,
+    "terjemahan": "berhenti"
   },
   {
     "huruf": "白",
     "romaji": "shiro",
     "suara": "shiro_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "putih"
   },
   {
     "huruf": "黒",
     "romaji": "kuro",
     "suara": "kuro_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "hitam"
   },
   {
     "huruf": "赤",
     "romaji": "aka",
     "suara": "aka_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "merah"
   },
   {
     "huruf": "青",
     "romaji": "ao",
     "suara": "ao_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "biru"
   },
   {
     "huruf": "色",
     "romaji": "iro",
     "suara": "iro_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "warna"
   },
   {
     "huruf": "高",
     "romaji": "takai",
     "suara": "takai_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "tinggi, mahal"
   },
   {
     "huruf": "安",
     "romaji": "yasui",
     "suara": "yasui_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "murah, aman"
   },
   {
     "huruf": "多",
     "romaji": "ooku",
     "suara": "ooku_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "banyak"
   },
   {
     "huruf": "少",
     "romaji": "sukunai",
     "suara": "sukunai_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "sedikit"
   },
   {
     "huruf": "長",
     "romaji": "nagai",
     "suara": "nagai_3",
-    "level": 8
+    "level": 8,
+    "terjemahan": "panjang, kepala"
   },
   {
     "huruf": "新",
     "romaji": "atarashii",
     "suara": "atarashii_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "baru"
   },
   {
     "huruf": "古",
     "romaji": "furui",
     "suara": "furui_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "lama"
   },
   {
     "huruf": "朝",
     "romaji": "asa",
     "suara": "asa_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "pagi"
   },
   {
     "huruf": "昼",
     "romaji": "hiru",
     "suara": "hiru_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "siang"
   },
   {
     "huruf": "夜",
     "romaji": "yoru",
     "suara": "yoru_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "malam"
   },
   {
     "huruf": "週",
     "romaji": "shuu",
     "suara": "shuu_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "minggu"
   },
   {
     "huruf": "月",
     "romaji": "getsu",
     "suara": "getsu_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "bulan (hari)"
   },
   {
     "huruf": "火",
     "romaji": "ka",
     "suara": "ka_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "api (hari)"
   },
   {
     "huruf": "水",
     "romaji": "sui",
     "suara": "sui_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "air (hari)"
   },
   {
     "huruf": "木",
     "romaji": "moku",
     "suara": "moku_3",
-    "level": 9
+    "level": 9,
+    "terjemahan": "pohon (hari)"
   },
   {
     "huruf": "金",
     "romaji": "kin2",
     "suara": "kin2_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "emas (hari)"
   },
   {
     "huruf": "土",
     "romaji": "do",
     "suara": "do_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "tanah (hari)"
   },
   {
     "huruf": "曜",
     "romaji": "you",
     "suara": "you_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "hari dalam seminggu"
   },
   {
     "huruf": "春",
     "romaji": "haru",
     "suara": "haru_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "musim semi"
   },
   {
     "huruf": "夏",
     "romaji": "natsu",
     "suara": "natsu_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "musim panas"
   },
   {
     "huruf": "秋",
     "romaji": "aki",
     "suara": "aki_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "musim gugur"
   },
   {
     "huruf": "冬",
     "romaji": "fuyu",
     "suara": "fuyu_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "musim dingin"
   },
   {
     "huruf": "東",
     "romaji": "higashi",
     "suara": "higashi_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "timur"
   },
   {
     "huruf": "西",
     "romaji": "nishi",
     "suara": "nishi_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "barat"
   },
   {
     "huruf": "南",
     "romaji": "minami",
     "suara": "minami_3",
-    "level": 10
+    "level": 10,
+    "terjemahan": "selatan"
   }
 ]

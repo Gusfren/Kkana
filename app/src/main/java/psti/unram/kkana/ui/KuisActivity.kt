@@ -30,6 +30,10 @@ class KuisActivity : AppCompatActivity() {
     private var level: Int = 1
     private lateinit var uid: String
 
+    // Variabel untuk progress bar dan hitungan soal (tambahan)
+    private lateinit var quizProgressBar: ProgressBar
+    private lateinit var tvQuestionCount: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kuis)
@@ -38,6 +42,11 @@ class KuisActivity : AppCompatActivity() {
         etJawaban = findViewById(R.id.etJawaban)
         btnCek = findViewById(R.id.btnCekJawaban)
         tvSkor = findViewById(R.id.tvSkor)
+
+        // Inisialisasi komponen UI tambahan
+        quizProgressBar = findViewById(R.id.quizProgressBar)
+        tvQuestionCount = findViewById(R.id.tvQuestionCount)
+
 
         jenisHuruf = intent.getStringExtra("jenisHuruf") ?: "hiragana"
         level = intent.getIntExtra("level", 1)
@@ -96,5 +105,9 @@ class KuisActivity : AppCompatActivity() {
         val index = Random.nextInt(listHuruf.size)
         hurufSekarang = listHuruf[index]
         tvHuruf.text = hurufSekarang.huruf
+
+        // Update progress bar dan text
+        quizProgressBar.progress = totalSoal
+        tvQuestionCount.text = "Soal ${totalSoal + 1}/$batasSoal"
     }
 }
