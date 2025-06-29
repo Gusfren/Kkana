@@ -124,7 +124,6 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
-
     private fun tampilkanPilihan(jenisHuruf: String) {
         val namaHuruf = when (jenisHuruf) {
             "hiragana" -> "Hiragana"
@@ -153,9 +152,7 @@ class MenuActivity : AppCompatActivity() {
         progressText.text = "Progress: $jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
         levelText.text = getLevelText(rataRata)
 
-        // Ubah AlertDialog.Builder menjadi MaterialAlertDialogBuilder dan tambahkan gaya kustom
         val alertDialog = MaterialAlertDialogBuilder(this, R.style.CustomAlertDialogTheme)
-
             .setView(dialogView)
             .create()
 

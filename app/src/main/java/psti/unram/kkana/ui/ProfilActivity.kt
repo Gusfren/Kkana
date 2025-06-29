@@ -18,6 +18,8 @@ import psti.unram.kkana.utils.ProgressUtil
 import psti.unram.kkana.utils.ScoreManager
 import java.io.File
 import java.io.FileOutputStream
+import com.bumptech.glide.Glide
+
 
 class ProfilActivity : AppCompatActivity() {
 
@@ -28,7 +30,7 @@ class ProfilActivity : AppCompatActivity() {
     private lateinit var btnSimpan: Button
     private lateinit var btnReset: Button
     private lateinit var btnResetScore: Button
-    private lateinit var btnLogout: Button
+    private lateinit var btnLogout: TextView // DIUBAH DARI Button MENJADI TextView
     private lateinit var btnBack: ImageButton
 
     private val auth = FirebaseAuth.getInstance()
@@ -47,7 +49,12 @@ class ProfilActivity : AppCompatActivity() {
                 if (savedPath != null) {
                     localPhotoPath = savedPath
                     savePhotoPathLocally(savedPath)
-                    ivProfilePhoto.setImageBitmap(BitmapFactory.decodeFile(savedPath))
+                    Glide.with(this)
+                        .load(File(savedPath))
+                        .circleCrop()
+                        .placeholder(R.drawable.default_profile)
+                        .error(R.drawable.default_profile)
+                        .into(ivProfilePhoto)
                 } else {
                     Toast.makeText(this, "Gagal menyimpan foto", Toast.LENGTH_SHORT).show()
                 }
@@ -66,7 +73,7 @@ class ProfilActivity : AppCompatActivity() {
         btnSimpan = findViewById(R.id.btnSimpan)
         btnReset = findViewById(R.id.btnResetProgress)
         btnResetScore = findViewById(R.id.btnResetScore)
-        btnLogout = findViewById(R.id.btnLogout)
+        btnLogout = findViewById(R.id.btnLogout) // FINDVIEWBYID masih menggunakan ID yang sama
         btnBack = findViewById(R.id.btnBack)
 
         tvEmail.text = auth.currentUser?.email ?: "Email tidak ditemukan"
@@ -115,6 +122,7 @@ class ProfilActivity : AppCompatActivity() {
                 .show()
         }
 
+        // SetClickListener untuk TextView (btnLogout)
         btnLogout.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")
@@ -149,7 +157,12 @@ class ProfilActivity : AppCompatActivity() {
 
             val path = loadPhotoPathLocally()
             if (path != null && File(path).exists()) {
-                ivProfilePhoto.setImageBitmap(BitmapFactory.decodeFile(path))
+                Glide.with(this)
+                    .load(File(path))
+                    .circleCrop()
+                    .placeholder(R.drawable.default_profile)
+                    .error(R.drawable.default_profile)
+                    .into(ivProfilePhoto)
             } else {
                 ivProfilePhoto.setImageResource(R.drawable.default_profile)
             }
