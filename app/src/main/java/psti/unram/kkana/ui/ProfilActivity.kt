@@ -16,6 +16,7 @@ import psti.unram.kkana.R
 import psti.unram.kkana.auth.LoginActivity
 import psti.unram.kkana.utils.ProgressUtil
 import psti.unram.kkana.utils.ScoreManager
+import psti.unram.kkana.utils.DailyChallengeManager
 import java.io.File
 import java.io.FileOutputStream
 import com.bumptech.glide.Glide
@@ -30,7 +31,7 @@ class ProfilActivity : AppCompatActivity() {
     private lateinit var btnSimpan: Button
     private lateinit var btnReset: Button
     private lateinit var btnResetScore: Button
-    private lateinit var btnLogout: TextView // DIUBAH DARI Button MENJADI TextView
+    private lateinit var btnLogout: TextView
     private lateinit var btnBack: ImageButton
 
     private val auth = FirebaseAuth.getInstance()
@@ -73,7 +74,7 @@ class ProfilActivity : AppCompatActivity() {
         btnSimpan = findViewById(R.id.btnSimpan)
         btnReset = findViewById(R.id.btnResetProgress)
         btnResetScore = findViewById(R.id.btnResetScore)
-        btnLogout = findViewById(R.id.btnLogout) // FINDVIEWBYID masih menggunakan ID yang sama
+        btnLogout = findViewById(R.id.btnLogout)
         btnBack = findViewById(R.id.btnBack)
 
         tvEmail.text = auth.currentUser?.email ?: "Email tidak ditemukan"
@@ -101,6 +102,8 @@ class ProfilActivity : AppCompatActivity() {
                         for (jenis in jenisHuruf) {
                             ProgressUtil.resetProgress(this, jenis, uid)
                         }
+                        ProgressUtil.resetDailyChallengeBonusCount(this, uid) // Reset bonus progres keseluruhan
+                        DailyChallengeManager.getInstance(this, uid).resetDailyChallengeState() // Reset status misi harian
                         Toast.makeText(this, "Progress belajar berhasil di-reset!", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -122,12 +125,12 @@ class ProfilActivity : AppCompatActivity() {
                 .show()
         }
 
-        // SetClickListener untuk TextView (btnLogout)
         btnLogout.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin logout?")
                 .setPositiveButton("Ya") { _, _ ->
+                    DailyChallengeManager.clearInstance()
                     auth.signOut()
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()

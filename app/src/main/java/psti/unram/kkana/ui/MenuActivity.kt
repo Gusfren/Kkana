@@ -14,7 +14,7 @@ import psti.unram.kkana.utils.ProgressUtil
 import java.io.File
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
+import psti.unram.kkana.utils.DailyChallengeManager
 
 class MenuActivity : AppCompatActivity() {
 
@@ -26,8 +26,18 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var tvKata: TextView
     private lateinit var profileIcon: ImageView
     private lateinit var tvUsername: TextView
+    // private lateinit var tvUserPoints: TextView // Dihilangkan karena tidak lagi menampilkan poin terpisah
+
+    // Daily Challenge UI elements
+    private lateinit var tvChallengeTitle: TextView
+    private lateinit var tvChallengeDescription: TextView // Perbaikan dari 'var var'
+    private lateinit var pbChallengeProgress: ProgressBar
+    private lateinit var tvChallengeProgress: TextView
+    private lateinit var tvChallengeReward: TextView
+    private lateinit var ivChallengeFlame: ImageView
 
     private lateinit var uid: String
+    private lateinit var dailyChallengeManager: DailyChallengeManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,9 +51,20 @@ class MenuActivity : AppCompatActivity() {
         }
 
         uid = user.uid
+        dailyChallengeManager = DailyChallengeManager.getInstance(this, uid)
 
         profileIcon = findViewById(R.id.profileIcon)
         tvUsername = findViewById(R.id.tvUsername)
+        // tvUserPoints = findViewById(R.id.tvUserPoints) // Dihilangkan
+
+        // Inisialisasi Daily Challenge UI elements
+        tvChallengeTitle = findViewById(R.id.tvChallengeTitle)
+        tvChallengeDescription = findViewById(R.id.tvChallengeDescription) // Pastikan sudah diperbaiki
+        pbChallengeProgress = findViewById(R.id.pbChallengeProgress)
+        tvChallengeProgress = findViewById(R.id.tvChallengeProgress)
+        tvChallengeReward = findViewById(R.id.tvChallengeReward)
+        ivChallengeFlame = findViewById(R.id.ivChallengeFlame)
+
 
         profileIcon.setOnClickListener {
             startActivity(Intent(this, ProfilActivity::class.java))
@@ -59,6 +80,12 @@ class MenuActivity : AppCompatActivity() {
 
         updateProgressGabungan()
         loadProfileData()
+        updateDailyChallengeUI()
+
+        dailyChallengeManager.addOnChangeListener {
+            updateDailyChallengeUI()
+            updateProgressGabungan() // Panggil untuk update progress bar dan tvKata
+        }
 
         btnHiragana.setOnClickListener {
             tampilkanPilihan("hiragana")
@@ -75,20 +102,27 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        updateProgressGabungan()
-        loadProfileData() // refresh username dan foto profil saat kembali dari ProfilActivity
+        dailyChallengeManager.initDailyChallenge() // Pastikan tantangan diinisialisasi
+        updateProgressGabungan() // Perbarui progress bar dan tvKata
+        loadProfileData() // Perbarui username dan foto profil
+        updateDailyChallengeUI() // Perbarui UI tantangan
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dailyChallengeManager.removeOnChangeListener {
+            updateDailyChallengeUI()
+            updateProgressGabungan()
+        }
     }
 
     private fun updateProgressGabungan() {
         val (jumlahKata, totalKata) = ProgressUtil.getProgressGabungan(this, uid)
         val (jumlahKuis, totalKuis) = ProgressUtil.getKuisProgressGabungan(this, uid)
+        val persentaseGabungan = ProgressUtil.getPersentaseGabungan(this, uid) // Ambil persentase gabungan
 
-        val persenKata = if (totalKata > 0) (jumlahKata * 100 / totalKata) else 0
-        val persenKuis = if (totalKuis > 0) (jumlahKuis * 100 / totalKuis) else 0
-        val rataRata = (persenKata + persenKuis) / 2
-
-        progressBar.progress = rataRata
-        tvLevel.text = getLevelText(rataRata)
+        progressBar.progress = persentaseGabungan
+        tvLevel.text = ProgressUtil.getLevelLabel(persentaseGabungan)
         tvKata.text = "$jumlahKata/$totalKata kata • $jumlahKuis/$totalKuis kuis"
     }
 
@@ -99,6 +133,7 @@ class MenuActivity : AppCompatActivity() {
             .addOnSuccessListener { doc ->
                 if (doc.exists()) {
                     val username = doc.getString("username") ?: "User"
+                    // Poin tidak lagi diambil karena tvUserPoints dihilangkan
                     tvUsername.text = "こんにちは, $username!"
                 } else {
                     tvUsername.text = "こんにちは, User!"
@@ -121,6 +156,24 @@ class MenuActivity : AppCompatActivity() {
                 .load(R.drawable.default_profile)
                 .circleCrop()
                 .into(profileIcon)
+        }
+    }
+
+    private fun updateDailyChallengeUI() {
+        tvChallengeTitle.text = dailyChallengeManager.getChallengeTitle()
+        tvChallengeDescription.text = dailyChallengeManager.getChallengeDescription()
+        pbChallengeProgress.max = dailyChallengeManager.challengeTarget
+        pbChallengeProgress.progress = dailyChallengeManager.currentChallengeProgress
+        tvChallengeProgress.text = "${dailyChallengeManager.currentChallengeProgress}/${dailyChallengeManager.challengeTarget} selesai"
+        tvChallengeReward.text = "Reward: ${dailyChallengeManager.rewardPoints} poin"
+
+        if (dailyChallengeManager.isChallengeCompleted) {
+            ivChallengeFlame.setImageResource(R.drawable.ic_flame_completed)
+            tvChallengeReward.text = "Selesai!"
+            tvChallengeReward.setTextColor(resources.getColor(R.color.green_success))
+        } else {
+            ivChallengeFlame.setImageResource(R.drawable.ic_flame)
+            tvChallengeReward.setTextColor(resources.getColor(R.color.black))
         }
     }
 

@@ -7,6 +7,9 @@ import java.io.InputStreamReader
 
 object ProgressUtil {
 
+    private const val KEY_DAILY_CHALLENGE_BONUS_COUNT = "daily_challenge_bonus_count"
+    private const val MAX_DAILY_CHALLENGE_BONUS_COUNT = 30 // Maksimal 30 tantangan harian yang dihitung sebagai bonus
+
     private fun getPrefsName(uid: String): String {
         return "progress_prefs_$uid"
     }
@@ -75,8 +78,27 @@ object ProgressUtil {
         editor.apply()
     }
 
+    // Fungsi baru untuk menambahkan 1 ke hitungan bonus tantangan harian
+    fun incrementDailyChallengeBonusCount(context: Context, uid: String) {
+        val prefs = context.getSharedPreferences(getPrefsName(uid), Context.MODE_PRIVATE)
+        var currentCount = prefs.getInt(KEY_DAILY_CHALLENGE_BONUS_COUNT, 0)
+        if (currentCount < MAX_DAILY_CHALLENGE_BONUS_COUNT) { // Batasi hingga MAX_DAILY_CHALLENGE_BONUS_COUNT
+            currentCount++
+            prefs.edit().putInt(KEY_DAILY_CHALLENGE_BONUS_COUNT, currentCount).apply()
+        }
+    }
 
+    // Fungsi baru untuk mendapatkan hitungan bonus tantangan harian
+    fun getDailyChallengeBonusCount(context: Context, uid: String): Int {
+        val prefs = context.getSharedPreferences(getPrefsName(uid), Context.MODE_PRIVATE)
+        return prefs.getInt(KEY_DAILY_CHALLENGE_BONUS_COUNT, 0)
+    }
 
+    // Fungsi baru untuk mereset bonus tantangan harian (misal di profil user)
+    fun resetDailyChallengeBonusCount(context: Context, uid: String) {
+        val prefs = context.getSharedPreferences(getPrefsName(uid), Context.MODE_PRIVATE)
+        prefs.edit().remove(KEY_DAILY_CHALLENGE_BONUS_COUNT).apply()
+    }
 
     fun getProgressGabungan(context: Context, uid: String): Pair<Int, Int> {
         val jenis = listOf("hiragana", "katakana", "kanji")
@@ -101,15 +123,19 @@ object ProgressUtil {
         return Pair(kuisSelesai, totalKuis)
     }
 
-    fun getProgressGabunganTotal50Persen(context: Context, uid: String): Pair<Int, Int> {
-        val huruf = getProgressGabungan(context, uid)
-        val kuis = getKuisProgressGabungan(context, uid)
-        return Pair(huruf.first + kuis.first, huruf.second + kuis.second)
-    }
-
+    // Mengintegrasikan bonus tantangan harian ke dalam perhitungan persentase gabungan
     fun getPersentaseGabungan(context: Context, uid: String): Int {
-        val gabungan = getProgressGabunganTotal50Persen(context, uid)
-        return if (gabungan.second > 0) (gabungan.first * 100) / gabungan.second else 0
+        val (learnedItems, totalItems) = getProgressGabungan(context, uid)
+        val (completedQuizzes, totalQuizzes) = getKuisProgressGabungan(context, uid)
+        val completedDailyChallenges = getDailyChallengeBonusCount(context, uid)
+
+        // Numerator total: items learned + quizzes completed + daily challenges completed (sebagai bonus unit)
+        val totalNumerator = learnedItems + completedQuizzes + completedDailyChallenges
+
+        // Denominator total: total possible items + total possible quizzes + max possible daily challenge bonus units
+        val totalDenominator = totalItems + totalQuizzes + MAX_DAILY_CHALLENGE_BONUS_COUNT
+
+        return if (totalDenominator > 0) (totalNumerator * 100) / totalDenominator else 0
     }
 
     fun getLevelLabel(persentase: Int): String {
