@@ -52,22 +52,11 @@ class RegisterActivity : AppCompatActivity() {
                         val currentUser = auth.currentUser
                         val uid = currentUser?.uid
 
-                        // Kirim email verifikasi
-                        currentUser?.sendEmailVerification()
-                            ?.addOnCompleteListener { verifyTask ->
-                                if (verifyTask.isSuccessful) {
-                                    Toast.makeText(this, "Registrasi sukses. Silakan verifikasi email kamu.", Toast.LENGTH_LONG).show()
-                                } else {
-                                    Toast.makeText(this, "Gagal kirim email verifikasi.", Toast.LENGTH_SHORT).show()
-                                }
-                            }
-
                         // Simpan ke Firestore
                         if (uid != null) {
                             val user = hashMapOf(
                                 "username" to username,
                                 "email" to email,
-                                "photoUrl" to ""
                             )
 
                             FirebaseFirestore.getInstance().collection("users")
