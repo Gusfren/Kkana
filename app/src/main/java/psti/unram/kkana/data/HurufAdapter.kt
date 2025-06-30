@@ -1,4 +1,3 @@
-// app/src/main/java/psti/unram/kkana/data/HurufAdapter.kt
 package psti.unram.kkana.data
 
 import android.content.Context
@@ -13,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import psti.unram.kkana.R
 import psti.unram.kkana.utils.ProgressUtil
 import com.google.firebase.auth.FirebaseAuth
+import psti.unram.kkana.utils.DailyChallengeManager // Import new manager
 
 class HurufAdapter(
     private val context: Context,
@@ -69,7 +69,6 @@ class HurufAdapter(
             holder.terjemahan.visibility = View.GONE
         }
 
-
         holder.itemLayout.setOnClickListener {
             val resId = context.resources.getIdentifier(huruf.suara, "raw", context.packageName)
             if (resId != 0) {
@@ -79,6 +78,12 @@ class HurufAdapter(
 
                 val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@setOnClickListener
                 ProgressUtil.tandaiHurufDipelajari(context, jenisHuruf, huruf.romaji, uid)
+
+                // Beri tahu DailyChallengeManager bahwa huruf telah dipelajari
+                // Hanya untuk kanji, berikan karakter kanji sebenarnya sebagai identifier
+                if (jenisHuruf == "kanji" || jenisHuruf == "hiragana" || jenisHuruf == "katakana") {
+                    DailyChallengeManager.getInstance(context, uid).trackLearningProgress(jenisHuruf, huruf.huruf)
+                }
             }
         }
     }

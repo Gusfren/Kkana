@@ -12,6 +12,7 @@ import android.content.Intent
 import psti.unram.kkana.utils.ScoreManager
 import psti.unram.kkana.utils.ProgressUtil
 import com.google.firebase.auth.FirebaseAuth
+import psti.unram.kkana.utils.DailyChallengeManager // Import DailyChallengeManager
 
 class KuisActivity : AppCompatActivity() {
 
@@ -30,7 +31,6 @@ class KuisActivity : AppCompatActivity() {
     private var level: Int = 1
     private lateinit var uid: String
 
-    // Variabel untuk progress bar dan hitungan soal (tambahan)
     private lateinit var quizProgressBar: ProgressBar
     private lateinit var tvQuestionCount: TextView
 
@@ -43,7 +43,6 @@ class KuisActivity : AppCompatActivity() {
         btnCek = findViewById(R.id.btnCekJawaban)
         tvSkor = findViewById(R.id.tvSkor)
 
-        // Inisialisasi komponen UI tambahan
         quizProgressBar = findViewById(R.id.quizProgressBar)
         tvQuestionCount = findViewById(R.id.tvQuestionCount)
 
@@ -87,9 +86,11 @@ class KuisActivity : AppCompatActivity() {
 
     private fun tampilkanSoalBaru() {
         if (totalSoal >= batasSoal) {
-            // Simpan skor dan progress sesuai UID
             ScoreManager.setHighScore(this, jenisHuruf, level, skor, uid)
             ProgressUtil.tandaiLevelKuisSelesai(this, jenisHuruf, level, uid)
+
+            // Panggil trackQuizCompletion untuk Daily Challenge saat kuis selesai
+            DailyChallengeManager.getInstance(this, uid).trackQuizCompletion()
 
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("skor", skor)
@@ -106,7 +107,6 @@ class KuisActivity : AppCompatActivity() {
         hurufSekarang = listHuruf[index]
         tvHuruf.text = hurufSekarang.huruf
 
-        // Update progress bar dan text
         quizProgressBar.progress = totalSoal
         tvQuestionCount.text = "Soal ${totalSoal + 1}/$batasSoal"
     }
