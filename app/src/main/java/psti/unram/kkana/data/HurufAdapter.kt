@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import psti.unram.kkana.R
 import psti.unram.kkana.utils.ProgressUtil
 import com.google.firebase.auth.FirebaseAuth
-import psti.unram.kkana.utils.DailyChallengeManager // Import new manager
+import psti.unram.kkana.utils.DailyChallengeManager
 
 class HurufAdapter(
     private val context: Context,
